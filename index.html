@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Portal Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="toggle-mode">
+      <button id="mode-toggle">Light Mode</button>
+    </div>
+
+    <div class="goggles" id="goggles"></div>
+
+    <div class="login-container">
+      <div class="login-box">
+        <div class="tab">
+          <button class="active">Email</button>
+          <button>Phone</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm">
+          <!-- Email Field -->
+          <div class="input-group email-group">
+            <label>Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+
+          <!-- Phone Field -->
+          <div class="input-group phone-group hidden">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+
+          <div class="input-group password-group">
+            <label>Password</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                required
+              />
+              <span class="toggle-password" id="togglePassword">👁️</span>
+            </div>
+          </div>
+
+          <button type="submit" class="signin-btn">Sign In</button>
+        </form>
+
+        <p class="signup-text">
+          Don't have an account? <a href="signup.html">Create one</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,340 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: background 0.5s, color 0.3s;
+  background: linear-gradient(
+    270deg,
+    #0c021c,
+    #18afd1,
+    #0d0c1e,
+    #6412a2,
+    #114d50
+  );
+  background-size: 1000% 1000%;
+  animation: neonBackground 10s ease infinite;
+  color: #3aaa9f;
+}
+
+/* Light Mode Background */
+body.light-mode {
+  background: linear-gradient(135deg, #996b1b, #d798d5);
+  background-size: cover;
+  animation: none; /* No crazy animation in light mode */
+  color: #ab1717;
+}
+
+/* Neon Gradient Animation */
+@keyframes neonBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* LIGHT MODE */
+body.light-mode {
+  background: #e3dbcd;
+}
+
+/* Neon Glow Animation */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1);
+  background-image: url("eyes.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  border-radius: 60px;
+  padding: 100px;
+  width: 800px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+  animation: float 3s ease-in-out infinite;
+}
+
+body.light-mode .login-box {
+  background: rgba(255, 255, 255, 0.9);
+  background-image: url("eyes.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #441a1a;
+  box-shadow: 0 0 15px rgba(105, 49, 158, 0.1);
+}
+
+.signup-box {
+  background: rgba(255, 255, 255, 0.1);
+  background-image: url("eyes.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  border-radius: 60px;
+  padding: 100px;
+  width: 800px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.5);
+  animation: float 3s ease-in-out infinite;
+}
+
+.signup-box h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #e70e40;
+  -webkit-text-stroke: 1px rgb(232, 221, 221);
+  text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000,
+    -2px -2px 0 #000;
+}
+
+.signup-box input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.signup-box input::placeholder {
+  color: #ddd;
+  font-weight: normal;
+}
+
+.signup-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #dc0c0c;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signup-box button:hover {
+  background: #c60e0e;
+  transform: scale(1.05);
+}
+
+.signup-box a {
+  color: rgb(166, 255, 0);
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+  transition: 0.3s;
+}
+
+.signup-box a:hover {
+  color: #0ff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 28px;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab button.active {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.signin-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.signin-btn:hover {
+  transform: scale(1.05);
+}
+
+.signup-text {
+  margin-top: 15px;
+}
+
+.signup-text a {
+  color: #ff4b2b;
+  text-decoration: none;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(1);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Goggles Animation with Neon Pulse */
+.goggles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 200px;
+  height: 100px;
+  border: 5px solid red;
+  border-radius: 50px;
+  opacity: 0;
+  z-index: 10;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 20px red, inset 0 0 20px red;
+  animation: neonPulse 1s infinite alternate;
+}
+
+/* Keyframes for Neon Glow Pulse */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 15px red, inset 0 0 15px red;
+  }
+  50% {
+    box-shadow: 0 0 40px red, inset 0 0 25px red;
+  }
+  100% {
+    box-shadow: 0 0 25px red, inset 0 0 20px red;
+  }
+}
+
+/* Toggle Mode Button */
+.toggle-mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#mode-toggle {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #ff4b2b;
+  color: white;
+  cursor: pointer;
+}
+/* Hide/Show Inputs with Animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+/* Password Wrapper */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* space for eye */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #ff4b2b; /* Red neon hover */
+}
